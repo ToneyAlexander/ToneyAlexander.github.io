@@ -1,4 +1,12 @@
 body {
   background-color: #00384A;
-  font-family: sans-serif;
+  font-family: sans-serif, calibri;
+}
+#container {
+    background-color: #00865A;
+    width: 80%;
+    padding: 25px;
+    border: 25px #00865A;
+    margin: 8% auto;
+text-align: center
 }
