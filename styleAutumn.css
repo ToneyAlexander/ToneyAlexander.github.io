@@ -9,7 +9,8 @@ body {
     padding: 25px;
     border: 25px #9E3800;
     margin: 5% auto;
-    text-align: center
+    text-align: center;
+    max-width: 850px;
 }
 #heading {
     
