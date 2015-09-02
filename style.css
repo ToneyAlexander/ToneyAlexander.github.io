@@ -1,12 +1,21 @@
 body {
-  background-color: #00384A;
-  font-family: sans-serif, calibri;
+    background-color: #441B09;
+    font-family: sans-serif, calibri;
+    color: #EEDD99;
 }
 #container {
-    background-color: #00865A;
+    background-color: #9E3800;
     width: 85%;
     padding: 25px;
-    border: 25px #00865A;
+    border: 25px #9E3800;
     margin: 5% auto;
-text-align: center
+    text-align: center
+}
+#heading {
+    
+}
+#content {
+    background-color: #C87100;
+    text-align:left;
+    text-indent: 2.0em;
 }
