@@ -19,8 +19,8 @@ body {
 }
 #content {
     background-color: #77AB59;
-    text-align:left;
-    text-indent: 2.0em;
+    text-align:center;
+    /*text-indent: 2.0em;*/
 }
 #container2 {
     float:right;
