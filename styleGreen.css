@@ -6,10 +6,10 @@ body {
 #container1 {
     float:left;
     background-color: #36802D;
-    width: 50%;
-    padding: 25px;
-    border: 25x #36802D;
-    margin: 3% 3% 0% 5%;
+    width: 38%;
+    padding: 2%;
+    border: 2% #36802D;
+    margin: 2% 3% 0% 5%;
     /* TOP RIGHT BOTTOM LEFT*/
     text-align: center;
     max-width: 750px;
@@ -25,10 +25,10 @@ body {
 #container2 {
     float:right;
     background-color: #36802D;
-    width: 50%;
-    padding: 25px;
-    border: 25px #36802D;
-    margin: 3% 5% 0% 0%;
+    width: 38%;
+    padding: 2%;
+    border: 2% #36802D;
+    margin: 2% 5% 0% 3%;
     text-align: center;
     max-width: 750px;
 }
