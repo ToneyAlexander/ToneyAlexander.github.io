@@ -26,20 +26,20 @@ html, body {
     margin: 0% 0% 0% 3%;
     max-width: 620px;
 }
-.halfContainerL {
+.halfContainerL { 
     float:left;
     min-width: 44%;
     max-width: 480px;
     border: 2% #36802D;
     display: block;
 }
-.halfContainerR {
+.halfContainerR { 
     float:right;
     min-width: 44%;
     max-width: 480px;
     border: 2% #36802D;
     margin: 0% 0% 0% 4%;
-    height: auto;
+    height: auto; 
     display: block;
 }
 
@@ -98,7 +98,7 @@ html, body {
     background-color: #234D20;
     display: flex;
 }
-/*
+/* 
 Light Green: #C9DF8A
 Off White: #F0F7DA
 http://960.gs/demo.html
