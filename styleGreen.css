@@ -11,7 +11,7 @@ html, body {
 }
 .container {
     background-color: #36802D;
-        padding: 2%;
+    padding: 2%;
     text-align: center;
 }
 .container1 {
@@ -26,10 +26,29 @@ html, body {
     margin: 0% 0% 0% 3%;
     max-width: 620px;
 }
+.halfContainerL {
+    float:left;
+    min-width: 44%;
+    max-width: 480px;
+    border: 2% #36802D;
+    display: block;
+}
+.halfContainerR {
+    float:right;
+    min-width: 44%;
+    max-width: 480px;
+    border: 2% #36802D;
+    margin: 0% 0% 0% 4%;
+    height: auto;
+    display: block;
+}
+
+
 .content {
     background-color: #77AB59;
     text-align:center;
         padding: 2%;
+            text-align: left;
     /*text-indent: 2.0em;*/
 }
 .paragraph {
