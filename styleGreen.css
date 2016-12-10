@@ -1,58 +1,88 @@
-body {
+html, body {
     background-color: #234D20;
     font-family: sans-serif, calibri;
     color: #232F20;
+    margin 0;
+    padding-bottom: 25px;
+    padding-top: 1%;
 }
-#container1 {
-    float:left;
+.widthContainer{
+    width: 100%;
+}
+.container {
     background-color: #36802D;
-    width: 38%;
-    padding: 2%;
-    border: 2% #36802D;
-    margin: 2% 3% 0% 5%;
-    /* TOP RIGHT BOTTOM LEFT*/
+        padding: 2%;
     text-align: center;
-    max-width: 750px;
 }
-#heading {
-    
+.container1 {
+    float:left;
+    min-width: 31%;
+    max-width: 300px;
 }
-#content {
+.container2 {
+    float:right;
+    min-width: 58%;
+    border: 2% #36802D;
+    margin: 0% 0% 0% 3%;
+    max-width: 620px;
+}
+.content {
     background-color: #77AB59;
     text-align:center;
+        padding: 2%;
     /*text-indent: 2.0em;*/
 }
-#container2 {
-    float:right;
-    background-color: #36802D;
-    width: 38%;
-    padding: 2%;
-    border: 2% #36802D;
-    margin: 2% 4% 0% 3%;
-    text-align: center;
-    max-width: 750px;
+.paragraph {
+    background-color: #77AB59;
+    text-align:left;
+    padding: 3% 3% 3% 3%;
+    text-indent: 2.0em;
 }
-#bottom {
-    clear:both;
-    width:88%;
+.flexor {
+    flex: 1;
+}
+.button{
+    background-color: #77AB59;
+    border: none;
+    padding: 10px 20px;
     text-align: center;
-    background-color: #36802D;
-    margin: 4% 3% 5% 5%;
-    padding: 20px;
+    text-decoration: none;
     display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
 }
-#top {
+
+.spanner{
+    width:88%;
+    max-width: 960px;
+    text-align: center;
+    background-color: #36802D;
+    margin: 4% 5% 2% 5%;
+    margin-right: auto;
+    margin-left: auto;
+    clear:both;
+    text-align: center;
+}
+.menu {
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+}
+.head {
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 22px;
-    clear:both;
-    width:88%;
-    text-align: center;
-    background-color: #36802D;
-    margin: 4% 3% 2% 5%;
-    padding: 20px;
-    display: inline-block;
+}
+.items {
+    margin-top: 1px;
+    background-color: #234D20;
+    display: flex;
 }
 /*
 Light Green: #C9DF8A
 Off White: #F0F7DA
-
+http://960.gs/demo.html
+http://www.w3schools.com/css/css_boxmodel.asp
+http://www.w3schools.com/howto/howto_css_animate_buttons.asp
 */
