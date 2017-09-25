@@ -4,11 +4,6 @@
         <title>Alexander Toney</title>
         <link rel="stylesheet" type="text/css" href="styleGreen.css" title="green">
         <script src="jquery-3.1.1.min.js"></script>
-        <script> 
-        $(function(){
-          $("#includeResume").load(".html"); 
-        });
-        </script> 
     </head>
     <body>
         <div class="head spanner">
@@ -79,9 +74,9 @@
                     <b><a href="AlexanderToneyResume.docx">DOCX Version</a></b>
                 </div>
                 <hr/>
+                <div id="includeResume"></div>
                 <div class="content" id="resumeHTML">
 
-                    <div id="includeResume"></div>
                     <div class=WordSection1 id="fullResume">
 
                         <table class=a border=0 cellspacing=0 cellpadding=0 width="100%"
@@ -461,6 +456,10 @@
             }else{
                 $("#home").slideDown();
             }
+        });
+        $(function(){
+          $("#includeResume").load("resume.html");
+            console.log("test");
         });
     </script>
     </body>
