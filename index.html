@@ -4,6 +4,11 @@
         <title>Alexander Toney</title>
         <link rel="stylesheet" type="text/css" href="styleGreen.css" title="green">
         <script src="jquery-3.1.1.min.js"></script>
+        <script> 
+        $(function(){
+          $("#includeResume").load(".html"); 
+        });
+        </script> 
     </head>
     <body>
         <div class="head spanner">
@@ -69,14 +74,14 @@
                     <hr/>
                 </div>
                 <div class="content">
-                    <b><a href="resume.pdf">PDF Version</a></b>
+                    <b><a href="AlexanderToneyResume.pdf">PDF Version</a></b>
                     <br><br>
-                    <b><a href="resume.docx">DOCX Version</a></b>
+                    <b><a href="AlexanderToneyResume.docx">DOCX Version</a></b>
                 </div>
                 <hr/>
                 <div class="content" id="resumeHTML">
 
-
+                    <div id="includeResume"></div>
                     <div class=WordSection1 id="fullResume">
 
                         <table class=a border=0 cellspacing=0 cellpadding=0 width="100%"
