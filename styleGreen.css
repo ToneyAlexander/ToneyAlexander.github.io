@@ -98,6 +98,18 @@ html, body {
     background-color: #234D20;
     display: flex;
 }
+a:link {
+    color: #FFFD80;
+}
+a:visited {
+    color: #FFC149;
+}
+a:hover {
+    background-color: #36802D;
+}
+a:active {
+    color: #FF9F80;
+}
 /* 
 Light Green: #C9DF8A
 Off White: #F0F7DA
