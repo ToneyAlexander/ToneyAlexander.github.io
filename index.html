@@ -1,245 +1,387 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Alexander Toney</title>
-        <link rel="stylesheet" type="text/css" href="styleGreen.css" title="green">
-        <script src="jquery-3.1.1.min.js"></script>
-    </head>
-    <body>
-        <div class="head spanner">
-            <h1>Alexander Toney</h1>
-        </div>
-        <div class="menu spanner">
-            <form class="flexor" action="#home">
-                <input class="button" type="submit" value="Home" id="home_btn"/>
-            </form>
-            <form class="flexor" action="#resume">
-                <input class="button" type="submit" value="Resume" id="resume_btn"/>
-            </form>
-            <form class="flexor" action="#project">
-                <input class="button" type="submit" value="Projects" id="project_btn"/>
-            </form>
-        </div>
+<style type="text/css">
+  body {
+    background-color: #150F1C;
+    /*#6F6550;*/
+    color: #E3D4B2;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+  }
 
-        <div id="home" class="pages spanner items">
+  a {
+    color: #FF931C;
+  }
 
-            <div class="container container1">
-                <div id="heading">
-                    <header>
-                        <h1>Contact</h1>
-                    </header>
-                    <hr/>
-                </div>
+  .dot {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    z-index: -1;
+  }
 
-                <div class="content">
-                    <b>School Email</b>
-                    <br><a href="mailto:Toney.77@osu.edu">Toney.77@osu.edu</a><br><br>
-                    <b><a href="https://www.linkedin.com/in/alex-toney-1bb464104">LinkedIn</a></b>
-                    <br><br>
-                    <b><a href="http://github.com/toneyAlexander">GitHub</a></b>
-                </div>
-                <hr/>
-            </div>
+  .head {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    z-index: 10;
+    background-color: #ffa5001a;
+  }
 
-            <div class="container container2">
-                <div id="heading">
-                    <header>
-                        <h1>About Me</h1>
-                    </header>
-                    <hr/>
-                </div>
-                <div class="paragraph">
-                    My name is Alex Toney, and I’m currently an 3rd year honors student at The Ohio State University, majoring in Computer Science & Engineering (with a focus in AI) and minoring in Linguistics.
-                </div>
-                <div class="paragraph">
-                    This site is where I collect interesting stuff I've done, mostly for personal use. The page itself is basically a bunch of experiments in figuring out web stuff.
-                    <br>
-                </div>
-                <hr/>
-            </div>
-        </div>
+  .hide {
+    display: none;
+  }
 
-        <div id="resume" class="pages spanner items">
+  .page-box {
+    padding: 2rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
 
-            <div class="container" style="width:100%;">
-                <div id="heading">
-                    <header>
-                        <h1>Resume</h1>
-                    </header>
-                    <hr/>
-                </div>
-                <div class="content">
-                    <b><a href="AlexanderToneyResume.pdf">PDF Version</a></b>
-                    <br><br>
-                    <b><a href="AlexanderToneyResume.docx">DOCX Version</a></b>
-                </div>
-                <hr/>
-                <div class="content" id="includeResume"></div>
-                <hr/>
-            </div>
-        </div>
+  /* More DD colors. BG white? vs in game? */
+  .dollar-dollar-page-box {
+    background-color: #DCEDC8;
+    color: #1B5E20;
+  }
 
-        <div id="project" class="pages">
+  .default-page-box {
+    background-color: #252526;
+  }
 
-            <div class="spanner items">
+  img.subsection-header {
+    display: block;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+  }
 
-                <div class="container halfContainerL">
-                    <div id="heading">
-                        <header>
-                            <h1>Dollar Dollar</h1>
-                        </header>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        A game for android<br>Use your finger to avoid the spinning line. See how long you can last!
-                        <br>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        <b>1.1 Changes</b><br>Added previous score record<br>Added dialog for resetting scores
-                        <br>
-                    </div>
-                    <div class="content">
-                        <a href="/DollarDollarv1.1.apk" download="DollarDollarv1.1.apk">
-                            Download Dollar Dollar v1.1
-                        </a>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        <b>2.0 Changes</b><br>Total rebuild from scratch<br>Follow coins for bonus points<br>Dark theme<br>Visual tweaks and effects
-                        <br>
-                    </div>
-                    <div class="content">
-                        <a href="/DollarDollarv2.0.apk" download="DollarDollarv2.0.apk">
-                            Download Dollar Dollar v2.0
-                        </a>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        <b>2.1 Release Notes</b><br>Relax mode created<br>Settings menu added<br>Coin visual tweaks
-                        <br>
-                    </div>
-                    <div class="content">
-                        <a href="/DollarDollarv2.1.apk" download="DollarDollarv2.1.apk">
-                            Download Dollar Dollar v2.1
-                        </a>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        <b>2.2 Release Notes</b><br>Dollar falls at 100 coins<br>First time user flow created<br>Visual tweaks and UI/graphics spice<br>Bug fixes
-                        <br>
-                    </div>
-                    <div class="content">
-                        <a href="/DollarDollarv2.2.apk" download="DollarDollarv2.2.apk">
-                            Download Dollar Dollar v2.2
-                        </a>
-                    </div>
-                </div>
-                <div class="container halfContainerR">
-                    <div id="heading">
-                        <header>
-                            <h1>Notifier</h1>
-                        </header>
-                        <hr/>
-                    </div>
-                    <div class="content">
-                        Simple utility application for android<br>Use it to create notifications with custom icon colors.<br>Useful for creating reminders that sit in the notification bar until you remove them. 
-                        <br>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        Click the link beliow to download
-                        <br>
-                    </div>
-                    <div class="content">
-                        <a href="/Notifier.apk" download="Notifier.apk">
-                            Download Notifier
-                        </a>
-                    </div>
-                    <hr/>
-                </div>
+  img.left-end {
+    display: block;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    clip-path: polygon(40% 0, 80% 0, 100% 100%, 40% 100%);
+  }
+
+  img.right-end {
+    display: block;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    clip-path: polygon(0 0, 60% 0, 60% 100%, 20% 100%);
+  }
+
+  .img-a {
+    width: fit-content;
+    height: fit-content;
+
+  }
+
+  .div-a {
+    float: left;
+    margin-left: -2.5rem;
+  }
+
+  .div-a-left {
+    float: left;
+  }
+
+  #nav-bar {
+    display: flex;
+    overflow: scroll;
+  }
+
+  section {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<head>
+  <title>toneyAlexander</title>
+  <script src="javascripts/main.js"></script>
+</head>
+
+<body>
+  <div id="stars"></div>
+  <div class="head">
+    <h1>toneyAlexander</h1>
+  </div>
+
+  <nav id="nav-bar">
+    <div class="div-a-left">
+      <a id="nav-home" href="#" class="img-a">
+        <img src="home_img.png" class="left-end">
+      </a>
+    </div>
+
+    <div class="div-a dollar-dollar-a">
+      <a id="nav-dollar-dollar" href="#dollar-dollar" class="img-a">
+        <img src="dd_screenshot.jpg" class="subsection-header">
+      </a>
+    </div>
+
+    <div class="div-a">
+      <a id="nav-empty" href="#empty" class="img-a">
+        <img src="empty.png" class="subsection-header">
+      </a>
+    </div>
+
+    <div class="div-a">
+      <a id="nav-temp" href="#temp" class="img-a">
+        <img src="temp.png" class="subsection-header">
+      </a>
+    </div>
+
+    <div class="div-a">
+      <a id="nav-home" href="#" class="img-a">
+        <img src="home_img.png" class="right-end">
+      </a>
+    </div>
+  </nav>
+  <!-----------------------home------------------------------>
+  <section id="home-section" class="page-box">
+    <div class="container container1">
+      <div id="heading">
+        <header>
+          <h1>Contact</h1>
+        </header>
+        <hr />
+      </div>
+
+      <div class="content">
+        <b>Links</b><br>
+        <b><a href="https://www.linkedin.com/in/alex-toney-1bb464104">LinkedIn</a></b>
+        <br><br>
+        <b><a href="http://github.com/toneyAlexander">GitHub</a></b>
+      </div>
+      <hr />
+    </div>
+
+    <div class="container container2">
+      <div id="heading">
+        <header>
+          <h1>About Me</h1>
+        </header>
+        <hr />
+      </div>
+      <div class="paragraph">
+        About me paragraph
+      </div>
+      <div class="paragraph">
+        This site is where I collect interesting stuff I've done, mostly for personal use. The page itself is basically
+        a bunch of experiments in figuring out web stuff.
+        <br>
+      </div>
+      <hr />
+    </div>
+
+  </section>
+  <!-----------------------dollar dollar--------------------->
+  <section id="dollar-dollar-section" class="page-box dollar-dollar-page-box">
+    <div id="heading">
+      <header>
+        <h1>Dollar Dollar</h1>
+      </header>
+    </div>
+    <hr />
+    <div class="content">
+      A game for android<br>Use your finger to avoid the spinning line. See how long you can last!
+      <br>
+    </div>
+    <hr />
+    <div class="content">
+      <b>1.1 Changes</b><br>Added previous score record<br>Added dialog for resetting scores
+      <br>
+    </div>
+    <div class="content">
+      <a href="apk/DollarDollarv1.1.apk" download="DollarDollarv1.1.apk">
+        Download Dollar Dollar v1.1
+      </a>
+    </div>
+    <hr />
+    <div class="content">
+      <b>2.0 Changes</b><br>Total rebuild from scratch<br>Follow coins for bonus points<br>Dark theme<br>Visual
+      tweaks and effects
+      <br>
+    </div>
+    <div class="content">
+      <a href="apk/DollarDollarv2.0.apk" download="DollarDollarv2.0.apk">
+        Download Dollar Dollar v2.0
+      </a>
+    </div>
+    <hr />
+    <div class="content">
+      <b>2.1 Release Notes</b><br>Relax mode created<br>Settings menu added<br>Coin visual tweaks
+      <br>
+    </div>
+    <div class="content">
+      <a href="apk/DollarDollarv2.1.apk" download="DollarDollarv2.1.apk">
+        Download Dollar Dollar v2.1
+      </a>
+    </div>
+    <hr />
+    <div class="content">
+      <b>2.2 Release Notes</b><br>Dollar falls at 100 coins<br>First time user flow created<br>Visual tweaks and
+      UI/graphics spice<br>Bug fixes
+      <br>
+    </div>
+    <div class="content">
+      <a href="apk/DollarDollarv2.2.apk" download="DollarDollarv2.2.apk">
+        Download Dollar Dollar v2.2
+      </a>
+    </div>
+  </section>
+
+  <section id="temp-section" class="page-box default-page-box">
+    <div id="heading">
+      <header>
+        <h1>Notifier</h1>
+      </header>
+      <hr />
+    </div>
+    <div class="content">
+      Simple utility application for android<br>Use it to create notifications with custom icon colors.<br>Useful
+      for creating reminders that sit in the notification bar until you remove them.
+      <br>
+    </div>
+    <hr />
+    <div class="content">
+      Click the link beliow to download
+      <br>
+    </div>
+    <div class="content">
+      <a href="apk/Notifier.apk" download="Notifier.apk">
+        Download Notifier
+      </a>
+    </div>
+    <hr />
 
 
-            </div>
-            <div class="spanner items">
-                <div class="container halfContainerL">
-                    <div id="heading">
-                        <header>
-                            <h1>Sentimetrics</h1>
-                        </header>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        Web application made at OHI/O 2017<br>Gathers Tweets from a user selected area, then performs sentiment analysis on them for positivity or negativity. This data is then mapped using Esri ArcGIS. Won the Esri API challenge.
-                        <br>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        <b>Work in progress</b>
-                        <br>
-                    </div>
-                    <div class="content">
-                        <a href="https://github.com/akadoan1/Sentimentrics">
-                            GitHub Page
-                        </a>
-                    </div>
-                    <hr/>
-                </div>
-                <div class="container halfContainerR">
-                    <div id="heading">
-                        <header>
-                            <h1>FriendMe</h1>
-                        </header>
-                        <hr/>
-                    </div>
-                    <div class="content">
-                        Utility application for android made at OHI/O 2016<br>Use it to transfer contact information, exchange Facebook friend requests, and exchange Twitter follows between two users using android NFC 
-                        <br>
-                    </div>
-                    <hr/>
-                    <div class="content">
-                        <a href="https://github.com/ebencarek/FriendMe">
-                            GitHub Page
-                        </a>
-                    </div>
-                    <hr/>
-                </div>
+    <div id="heading">
+      <header>
+        <h1>Sentimetrics</h1>
+      </header>
+    </div>
+    <hr />
+    <div class="content">
+      Web application made at OHI/O 2017<br>Gathers Tweets from a user selected area, then performs sentiment
+      analysis on them for positivity or negativity. This data is then mapped using Esri ArcGIS. Won the Esri API
+      challenge.
+      <br>
+    </div>
+    <hr />
+    <div class="content">
+      <b>Work in progress</b>
+      <br>
+    </div>
+    <div class="content">
+      <a href="https://github.com/akadoan1/Sentimentrics">
+        GitHub Page
+      </a>
+    </div>
+    <hr />
+    </div>
+    <div class="container halfContainerR">
+      <div id="heading">
+        <header>
+          <h1>FriendMe</h1>
+        </header>
+        <hr />
+      </div>
+      <div class="content">
+        Utility application for android made at OHI/O 2016<br>Use it to transfer contact information, exchange
+        Facebook friend requests, and exchange Twitter follows between two users using android NFC
+        <br>
+      </div>
+      <hr />
+      <div class="content">
+        <a href="https://github.com/ebencarek/FriendMe">
+          GitHub Page
+        </a>
+      </div>
+      <hr />
+    </div>
+  </section>
 
-            </div>
+  <section id="EMPTY-SECTION" class="page-box default-page-box"></section>
+</body>
+<script>
+  var DOT_COUNT = 600 //10
+  //http://stackoverflow.com/questions/4743189/randomly-display-dots
+  document.getElementById("stars")
+  //put dots in a div, remove that when done
+  function createDot(x, y) {
+    var elem = document.createElement("span");
+    elem.setAttribute("class", "dot");
+    elem.setAttribute("style", "left:" + x + "px;top:" + y + "px;");
+    document.getElementById("stars").appendChild(elem);
+    //document.body.insertBefore(elem, document.body.firstChild);
+    return elem;
+  }
+  function anotherDot() {
+    createDot(
+      Math.floor(Math.random() * document.body.scrollWidth),
+      Math.floor(Math.random() * document.body.scrollHeight)
+    );
+  }
 
-        </div>
+  window.onload = function () {
+    for (var i = 0; i < DOT_COUNT; i++) {
+      anotherDot();
+    }
+    updateContent();
 
+  };
 
+  window.onresize = function (event) {
+    document.getElementById("stars").replaceChildren()
 
-        </div>
-    <script>
-        $(document).ready(function () {
-            $(".button").click(function (){
-                //$(".pages").hide();
-                //var item = window.location.hash.substr(1);
-                var item = this.id.split("_")[0];
-                $(".pages:visible").slideUp(function(){
-                    $("#" + item).slideDown();
-                });
-            });
-            $(".pages").hide();
-            var item = window.location.hash.substr(1);
-            if(item !== ""){
-                $("#" + item).slideDown();
-            }else{
-                $("#home").slideDown();
-            }
-        });
-        $(function(){
-          $("#includeResume").load("resume.html");
-            console.log("test");
-        });
-    </script>
-    </body>
+    for (var i = 0; i < DOT_COUNT; i++) {
+      anotherDot();
+    }
+  };
+
+  //Update content based on hash
+  function updateContent() {
+    //Get hash excluding the #
+    var hash = window.location.hash.substr(1);
+
+    var sections = [
+      document.getElementById('home-section'),
+      document.getElementById('dollar-dollar-section'),
+      document.getElementById('temp-section'),
+      document.getElementById('EMPTY-SECTION'),
+    ]
+
+    function hideBut(list, pos) {
+      for (var i = 0; i < list.length; i++) {
+        if (i == pos){
+          list[i].classList.remove('hide')
+        } else {
+          list[i].classList.add('hide')
+        }
+      }
+    }
+
+    if (hash === 'dollar-dollar') {
+      hideBut(sections, 1)
+    } else if (hash === 'empty') {
+      hideBut(sections, sections.length-1)
+    } else if (hash === 'temp') {
+      hideBut(sections, sections.length-2)
+    } else {
+      hideBut(sections, 0)
+    }
+  }
+
+  updateContent();
+  window.addEventListener('hashchange', updateContent);
+</script>
+
 </html>
-
-<!-- href can point to files on the system. Use fuller filepaths to find -->
-<!-- Screen readers don't understand styling -->
-<!-- STyle tag can insert directly -->
-<!-- Swappable palletes -->
-<!-- Make website SMOOTH, narrower body column -->
