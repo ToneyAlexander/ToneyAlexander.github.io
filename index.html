@@ -337,7 +337,7 @@
     return elem;
   }
   function anotherDot() {
-    height = Math.max(document.body.scrollHeight, window.screen.height, window.innerHeight)
+    height = Math.max(document.body.scrollHeight, window.innerHeight)
     createDot(
       Math.floor(Math.random() * document.body.scrollWidth),
       Math.floor(Math.random() * height)
@@ -352,13 +352,28 @@
 
   };
 
-  window.onresize = function (event) {
+  function debounce(func, wait) {
+    let timeout;
+    return function () {
+      const context = this, args = arguments;
+      const later = function () {
+        timeout = null;
+        func.apply(context, args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  function respreadStars(event) {
     document.getElementById("stars").replaceChildren()
 
     for (var i = 0; i < DOT_COUNT; i++) {
       anotherDot();
     }
   };
+
+  window.addEventListener('resize', debounce(respreadStars, 250));
 
   //Update content based on hash
   function updateContent() {
