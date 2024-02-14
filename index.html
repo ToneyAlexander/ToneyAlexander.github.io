@@ -337,9 +337,10 @@
     return elem;
   }
   function anotherDot() {
+    height = Math.max(document.body.scrollHeight, window.screen.height, window.innerHeight)
     createDot(
       Math.floor(Math.random() * document.body.scrollWidth),
-      Math.floor(Math.random() * document.body.scrollHeight)
+      Math.floor(Math.random() * height)
     );
   }
 
