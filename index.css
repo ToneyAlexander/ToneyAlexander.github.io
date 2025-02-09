@@ -228,7 +228,7 @@ section {
     width: 40rem;
     margin-left: auto;
     margin-right: auto;
-    min-height: 70vh;
+    min-height: 100vh;
     /*TODO: wow that's a janky hack*/
 }
 
