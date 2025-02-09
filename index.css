@@ -228,7 +228,8 @@ section {
     width: 40rem;
     margin-left: auto;
     margin-right: auto;
-    min-height: 1200px;
+    min-height: 70vh;
+    /*TODO: wow that's a janky hack*/
 }
 
 /* More DD colors. BG white? vs in game? */
