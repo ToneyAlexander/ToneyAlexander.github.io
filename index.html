@@ -1,120 +1,9 @@
 <!DOCTYPE html>
 <html>
-<style type="text/css">
-  body {
-    background-color: #150F1C;
-    /*#6F6550;*/
-    color: #E3D4B2;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: sans-serif;
-  }
-
-  a {
-    color: #FF931C;
-  }
-
-  .dot {
-    position: absolute;
-    background: white;
-    z-index: -1;
-  }
-
-  .two-dot {
-    width: 2px;
-    height: 2px;
-  }
-
-  .one-dot {
-    width: 1px;
-    height: 1px;
-  }
-
-  .head {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    z-index: 10;
-    background-color: #ffa5001a;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  .page-box {
-    padding: 2rem;
-    border-radius: 1rem 1rem 0rem 0rem;
-  }
-
-  /* More DD colors. BG white? vs in game? */
-  .dollar-dollar-page-box {
-    background-color: #DCEDC8;
-    color: #1B5E20;
-  }
-
-  .default-page-box {
-    background-color: #252526;
-  }
-
-  img.subsection-header {
-    display: block;
-    width: 12rem;
-    height: 16rem;
-    object-fit: cover;
-    clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
-  }
-
-  img.left-end {
-    display: block;
-    width: 6rem;
-    height: 16rem;
-    object-fit: cover;
-    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
-    margin-left: 1rem;
-  }
-
-  img.right-end {
-    display: block;
-    width: 6rem;
-    height: 16rem;
-    object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
-    margin-right: 1rem;
-  }
-
-  .img-a {
-    width: fit-content;
-    height: fit-content;
-
-  }
-
-  .div-a {
-    float: left;
-    margin-left: -2.5rem;
-  }
-
-  .div-a-left {
-    float: left;
-  }
-
-  #nav-bar {
-    display: flex;
-    overflow: scroll;
-  }
-
-  section {
-    margin: 0;
-    padding: 0;
-  }
-</style>
-
 <head>
   <title>toneyAlexander</title>
   <script src="javascripts/main.js"></script>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -321,6 +210,20 @@
   </section>
 
   <section id="EMPTY-SECTION" class="page-box default-page-box"></section>
+
+
+  
+
+
+  <div class="planet-container">
+    <div class="atmosphere">
+    </div>
+    <div class="planet-surface">
+    </div>
+
+  </div>
+
+
 </body>
 <script>
   var DOT_COUNT = 600 //10

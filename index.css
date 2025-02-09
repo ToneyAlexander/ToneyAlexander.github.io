@@ -1,0 +1,221 @@
+:root {
+    --art-width: 60vmin;
+    --art-height: 60vmin;
+    --stroke-color: #1fe13a;
+    --canvas-color: #352179;
+
+    --c1: #241e19;
+    --c2: #32251c;
+
+    --nav-height: 8rem;
+}
+
+body {
+    margin: 0;
+    overscroll-behavior-y: none;
+    background-color: #150F1C;
+    /*#6F6550;*/
+    color: #E3D4B2;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+}
+
+a {
+    color: #FF931C;
+}
+
+.dot {
+    position: absolute;
+    background: white;
+    z-index: -1;
+}
+
+.two-dot {
+    width: 2px;
+    height: 2px;
+}
+
+.one-dot {
+    width: 1px;
+    height: 1px;
+}
+
+.head {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    z-index: 10;
+    background-color: #ffa5001a;
+}
+
+.hide {
+    display: none;
+}
+
+.default-page-box {
+    background-color: #252526;
+}
+
+img.subsection-header {
+    display: block;
+    width: 12rem;
+    height: var(--nav-height);
+    object-fit: cover;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+}
+
+img.left-end {
+    display: block;
+    width: 6rem;
+    height: var(--nav-height);
+    object-fit: cover;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    margin-left: 1rem;
+}
+
+img.right-end {
+    display: block;
+    width: 6rem;
+    height: var(--nav-height);
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    margin-right: 1rem;
+}
+
+.img-a {
+    width: fit-content;
+    height: fit-content;
+}
+
+.div-a {
+    float: left;
+    margin-left: -2.5rem;
+    height: var(--nav-height);
+    /*todo adjust images*/
+}
+
+.div-a-left {
+    float: left;
+}
+
+#nav-bar {
+    display: flex;
+    overflow: scroll;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Container to hold the perspective */
+.planet-container {
+    margin-top: -300px;
+    ;
+    perspective: 1000px;
+    /* Controls the strength of the perspective */
+    width: 100%;
+    height: 500px;
+    /* Adjust height based on desired "curved" look */
+    overflow: hidden;
+    /* Ensures smooth edges on horizon */
+    position: relative;
+
+    box-shadow: 0 -80px 80px 80px #ffeecd66;
+    z-index: -1;
+
+
+}
+
+/* The curved surface */
+.planet-surface {
+    width: 100%;
+    height: 1000px;
+    /* Adjust for the desired height */
+    clip-path: ellipse(30% 90% at 50% 100%);
+    position: absolute;
+
+    transform-origin: top center;
+    transform: rotateX(75deg);
+
+    --grout: #a29a8e;
+    --tile: #98918d;
+
+    --s: 30px;
+    /* control the size*/
+
+
+    --_g: #0000 90deg, var(--c1) 0;
+    background:
+        conic-gradient(from 90deg at 2px 2px, var(--_g)),
+        conic-gradient(from 90deg at 1px 1px, var(--_g)),
+        var(--c2);
+    background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
+    /*calc(var(--s)/.2) calc(var(--s)/.2), calc(var(--s)) calc(var(--s))*/
+
+
+
+}
+
+.atmosphere {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    background-color: #ffeecd66;
+}
+
+/* Optional: Add subtle shadow for realism */
+.planet-surface::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*radial-gradient(circle at center, #f92d57db, rgba(0, 0, 0, .1));*/
+    background: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+    /* Just for visual effect */
+
+
+}
+
+
+.page-box {
+    padding: 2rem;
+    border-radius: .25rem;
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 600px;
+}
+
+/* More DD colors. BG white? vs in game? */
+.dollar-dollar-page-box {
+    background-color: #DCEDC8;
+    /*
+    #e3dfc4;
+    
+    */
+    color: #1B5E20;
+    /*background: linear-gradient(transparent, #DCEDC8DD 30%, #DCEDC8 40%);*/
+    /* curve? atmosphere?? */
+}
+
+.stars {
+    height: 100%;
+}
